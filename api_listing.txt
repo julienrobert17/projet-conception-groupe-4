@@ -1,0 +1,88 @@
+COOKIE CLICKER LIKE API
+=================================
+
+Path: localhost/api/getUser.php
+Parametres :
+- /getUser
+- /getUser?id_user=2
+
+Renvoie:
+- no parametre :
+[ { "id_user": "2", "pseudo": "daniellazer", "email": "daniellazer@gmail.com", "mdp": "$2y$10$ZPBm/YvjdpHxGI2me/flS.jkQLrxTCqlBvIBu03aZW/Gvyz.bOzmS", "monnaie": "0", "best_score": "48", "skin_hat": null, "skin_access": null, "skin_cible": null }, { "id_user": "4", "pseudo": "hugobg", "email": "hugobg17@gmail.com", "mdp": "$2y$10$2WpouRL1arT2a2L6vuRRDe5esIO6QKiuu3Ybb.vozgxw/bXB7XkxG", "monnaie": "0", "best_score": "0", "skin_hat": null, "skin_access": null, "skin_cible": null }]
+
+- id_user=2
+{ "id_user": "2", "pseudo": "daniellazer", "email": "daniellazer@gmail.com", "mdp": "$2y$10$ZPBm/YvjdpHxGI2me/flS.jkQLrxTCqlBvIBu03aZW/Gvyz.bOzmS", "monnaie": "0", "best_score": "48", "skin_hat": null, "skin_access": null, "skin_cible": null }
+
+==================================
+
+Path: localhost/RegisterUser
+Paramètres:
+- /RegisterUser?login=alexandre&mdp=passwd&email=harly.alex@gmail.com
+
+Renvoie:
+- utlisateur crée
+user_created
+
+- utlisateur deja existant
+already_exist
+
+- parametre manquant
+no_param
+
+==================================
+Path: localhost/api/Classement.php
+Parametres:
+_ no parametres
+
+renvoie :
+
+[ { "pseudo": "daniellazer", "score": "35", "id_user": "2" }, { "pseudo": "hugobg", "score": "37", "id_user": "4" } ]
+
+==================================
+
+Path : UpdateScore.php?id_user=2&score=18
+Parametres GET :
+- id_user
+- score
+
+Renvoie :
+- score unchangé car inférieur à son meilleur :
+	best_unchanged
+- score changé car meilleur que le meilleur :
+	best_changed
+
+==================================
+
+Path: localhost/Achat.php?id_user=2&id_objet=1
+Parametres GET :
+ - id_user
+ - id_objet
+
+Renvoie :
+- Achat réussie :
+	1
+
+- Si l'utilisateur le possède déjà :
+	2
+
+- Si l'utilisateur manque d'argent :
+	3
+
+==================================
+
+Path: localhost/RequestLogin
+Parametres GET :
+- /getUser?login=daniel&mdp=passwd
+
+Renvoie:
+- connexion réussie:
+{ "id_user": "2", "pseudo": "daniellazer", "email": "daniellazer@gmail.com", "mdp": "$2y$10$ZPBm/YvjdpHxGI2me/flS.jkQLrxTCqlBvIBu03aZW/Gvyz.bOzmS", "monnaie": "0", "best_score": "48", "skin_hat": null, "skin_access": null, "skin_cible": null }
+
+- mauvais mot de passe:
+wrong_pw
+
+- utilisateur pas crée
+wrong_user
+
+- paramètre manquant
+no_param
