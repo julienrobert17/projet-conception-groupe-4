@@ -10,6 +10,13 @@ import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 
+import android.util.Log;
+import android.view.View;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -30,10 +37,5 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    public int TotalPoints = 0;
-
-    public void Tappe(){
-        TotalPoints += 10;
-    }
 
 }

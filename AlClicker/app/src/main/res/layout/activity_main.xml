@@ -40,7 +40,8 @@
         android:layout_marginTop="330dp"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/kisspng_black_barbed_wire_white_pattern_barbwire_png_transparent_images_5a89bf2a483109_4065113915189"
-        tools:layout_editor_absoluteX="-40dp" />
+        tools:layout_editor_absoluteX="-40dp"
+        tools:ignore="MissingConstraints" />
 
     <ImageView
         android:id="@+id/imageView5"
@@ -50,7 +51,8 @@
         app:layout_constraintBottom_toTopOf="@+id/nav_host_fragment"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/kisspng_black_barbed_wire_white_pattern_barbwire_png_transparent_images_5a89bf2a483109_4065113915189"
-        tools:layout_editor_absoluteX="-40dp" />
+        tools:layout_editor_absoluteX="-40dp"
+        tools:ignore="MissingConstraints" />
 
     <TextView
         android:id="@+id/textView3"
@@ -60,7 +62,8 @@
         android:text="1000 pts"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/nav_host_fragment"
-        tools:layout_editor_absoluteX="152dp" />
+        tools:layout_editor_absoluteX="152dp"
+        tools:ignore="MissingConstraints" />
 
     <fragment
         android:id="@+id/nav_host_fragment"
