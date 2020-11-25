@@ -25,20 +25,18 @@ public class LoginPage extends AppCompatActivity {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_login);
-
-        Log.e("DEVE0304", "LoginPage:onCreate()");
     }
 
     public void runLoginRequest(View view){
 
         TextView LoginView = (EditText)findViewById(R.id.textLoginInput);
         TextView MdpView = (EditText)findViewById(R.id.textMdpInput);
+        TextView errorBox = (TextView)findViewById(R.id.errorText);
 
         //Log.e("DEVE0304", "MainActivity.runRestRequest()");
 
         RequestQueue queue = Volley.newRequestQueue(this);
         String url = "http://192.168.1.13/TRANSV/api/RequestLogin.php?login="+LoginView.getText().toString()+"&mdp="+MdpView.getText().toString();
-        //Log.e("DEV405",url);
 
         // Request a string response from the provided URL.
         StringRequest stringRequest = new StringRequest(Request.Method.GET, url,
@@ -53,29 +51,42 @@ public class LoginPage extends AppCompatActivity {
                             JSONObject json = new JSONObject(response);
 
                             Intent intent = new Intent(view.getContext(), Accueil.class);
+                            intent.putExtra("id_user",json.getInt("id_user"));
+                            intent.putExtra("pseudo",json.getString("pseudo"));
+                            intent.putExtra("monnaie",json.getInt("monnaie"));
+                            intent.putExtra("best_score",json.getInt("best_score"));
+                            intent.putExtra("skin_hat",json.getString("skin_hat"));
+                            intent.putExtra("skin_access",json.getString("skin_access"));
+                            intent.putExtra("skin_hat",json.getString("skin_hat"));
+                            intent.putExtra("skin_cible",json.getString("skin_cible"));
                             view.getContext().startActivity(intent);
 
 
                         } catch (JSONException e) {
 
                             e.printStackTrace();
+                            errorBox.setVisibility(View.VISIBLE);
 
                             switch (response){
                                 case "wrong_pw":
                                     Log.e("DEV405","Mauvais mdp");
+                                    errorBox.setText("Mauvais mot de passe");
                                     break;
 
                                 case "wrong_user":
                                     Log.e("DEV405","Utilisateur innexistant");
-                                    LoginView.setBackgroundColor(655764);
+                                    errorBox.setText("Utilisateur innexistant");
                                     break;
 
                                 case "no_param":
-                                    Log.e("DEV405","veuillez completer tout les champs");
+                                    Log.e("DEV405","Veuillez saisir tout les champs");
+                                    errorBox.setText("Veuillez saisir tout les champs");
+
                                     break;
 
                                 default:
                                     Log.e("DEV405","issou");
+                                    errorBox.setText("Les serveurs sont hors-ligne veuillez attendre");
                                     break;
                             }
                         }
@@ -89,5 +100,13 @@ public class LoginPage extends AppCompatActivity {
 
         // Add the request to the RequestQueue.
         queue.add(stringRequest);
+    };
+
+    public void goToRegisterPage(View view){
+
+        Log.e("DEVE0304", "Button clicked");
+
+        Intent intent = new Intent(view.getContext(), RegisterPage.class);
+        view.getContext().startActivity(intent);
     };
 }
