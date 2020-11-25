@@ -21,21 +21,32 @@
                 android:id="@+id/textLoginInput"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center"
                 android:ems="10"
+                android:hint="username"
                 android:importantForAutofill="no"
                 android:inputType="textPersonName"
-                android:text="daniellazer"
-                android:layout_gravity="center"/>
+                android:text="daniellazer" />
 
             <EditText
                 android:id="@+id/textMdpInput"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center"
                 android:ems="10"
+                android:hint="password"
                 android:importantForAutofill="no"
                 android:inputType="textPassword"
-                android:text="mdp"
-                android:layout_gravity="center"/>
+                android:text="mdp" />
+
+            <EditText
+                android:id="@+id/editMailInput"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:ems="10"
+                android:hint="email adress"
+                android:inputType="textEmailAddress" />
 
             <TextView
                 android:id="@+id/errorText"
@@ -51,10 +62,10 @@
                 android:id="@+id/button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:onClick="runLoginRequest"
+                android:layout_gravity="center"
+                android:onClick="runRegisterRequest"
                 android:text="Button"
-                app:backgroundTint="#DD1D1D"
-                android:layout_gravity="center"/>
+                app:backgroundTint="#DD1D1D" />
 
         </LinearLayout>
     </LinearLayout>

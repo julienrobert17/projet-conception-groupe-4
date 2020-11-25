@@ -19,13 +19,13 @@ import com.android.volley.toolbox.Volley;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-public class RegsiterPage extends AppCompatActivity {
+public class RegisterPage extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        setContentView(R.layout.activity_login);
+        setContentView(R.layout.activity_register);
     }
 
     public void runRegisterRequest(View view){
@@ -51,6 +51,7 @@ public class RegsiterPage extends AppCompatActivity {
                         switch (response){
                             case "already_exist":
                                 Log.e("DEV405","existe deja");
+                                errorBox.setVisibility(View.VISIBLE);
                                 errorBox.setText("Utilisateur déjà existant");
                                 break;
 
@@ -61,6 +62,7 @@ public class RegsiterPage extends AppCompatActivity {
                                 break;
 
                             case "no_param":
+                                errorBox.setVisibility(View.VISIBLE);
                                 Log.e("DEV405","Veuillez saisir tout les champs");
                                 errorBox.setText("Veuillez saisir tout les champs");
 

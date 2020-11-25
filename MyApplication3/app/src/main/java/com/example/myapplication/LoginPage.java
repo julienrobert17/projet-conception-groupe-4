@@ -101,4 +101,12 @@ public class LoginPage extends AppCompatActivity {
         // Add the request to the RequestQueue.
         queue.add(stringRequest);
     };
+
+    public void goToRegisterPage(View view){
+
+        Log.e("DEVE0304", "Button clicked");
+
+        Intent intent = new Intent(view.getContext(), RegisterPage.class);
+        view.getContext().startActivity(intent);
+    };
 }

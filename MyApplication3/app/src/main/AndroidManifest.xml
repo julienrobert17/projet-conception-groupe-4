@@ -52,10 +52,18 @@
 
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".MainActivity" />
+                android:value=".LoginPage" />
         </activity>
 
+        <activity
+            android:name=".RegisterPage"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.MyApplication.NoActionBar">
 
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".LoginPage" />
+        </activity>
 
 
     </application>
