@@ -8,10 +8,13 @@ $request_method = $_SERVER["REQUEST_METHOD"];
 $login = filter_input(INPUT_GET, 'login', FILTER_SANITIZE_STRING);
 $mdp = filter_input(INPUT_GET, 'mdp');
 $email = filter_input(INPUT_GET, 'email', FILTER_SANITIZE_EMAIL);
+$mdp = trim($mdp);
+$login = trim($login);
+
 
 switch($request_method) {
     case 'GET':
-        if (isset($login) && isset($mdp) && $email) {
+        if (!empty($login) && !empty($mdp) && !empty($email)) {
             if (getEmail($email) == 'false' && getPseudo($login) == 'false') {
                 createUser($login,$mdp,$email);
             } else {
