@@ -1,8 +1,12 @@
 package com.example.alclicker.ui.dashboard;
 
+import android.app.Activity;
+
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
+
+import com.example.alclicker.MainActivity;
 
 public class DashboardViewModel extends ViewModel {
 
@@ -10,7 +14,7 @@ public class DashboardViewModel extends ViewModel {
 
     public DashboardViewModel() {
         mText = new MutableLiveData<>();
-        mText.setValue("This is frappe Alexis fragment");
+        mText.setValue("");
     }
 
     public LiveData<String> getText() {

@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -9,7 +8,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="horizontal" >
+        android:orientation="horizontal">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -21,21 +20,31 @@
                 android:id="@+id/textLoginInput"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center"
                 android:ems="10"
                 android:importantForAutofill="no"
                 android:inputType="textPersonName"
-                android:text="daniellazer"
-                android:layout_gravity="center"/>
+                android:text="daniellazer" />
 
             <EditText
                 android:id="@+id/textMdpInput"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center"
                 android:ems="10"
                 android:importantForAutofill="no"
                 android:inputType="textPassword"
-                android:text="mdp"
-                android:layout_gravity="center"/>
+                android:text="mdp" />
+
+            <TextView
+                android:id="@+id/noAccount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:onClick="goToRegisterPage"
+                android:text="Pas de compte ? Cliquez ici"
+                android:textColor="#2C49EA"
+                android:textSize="18sp" />
 
             <TextView
                 android:id="@+id/errorText"
@@ -51,10 +60,10 @@
                 android:id="@+id/button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center"
                 android:onClick="runLoginRequest"
-                android:text="Button"
-                app:backgroundTint="#DD1D1D"
-                android:layout_gravity="center"/>
+                android:text="CONNECTER"
+                app:backgroundTint="#DD1D1D" />
 
         </LinearLayout>
     </LinearLayout>

@@ -25,7 +25,7 @@ public class login extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        setContentView(R.layout.login);
+        setContentView(R.layout.activity_login);
     }
 
     public void runLoginRequest(View view){
@@ -60,6 +60,7 @@ public class login extends AppCompatActivity {
                             intent.putExtra("skin_access",json.getString("skin_access"));
                             intent.putExtra("skin_hat",json.getString("skin_hat"));
                             intent.putExtra("skin_cible",json.getString("skin_cible"));
+                            intent.putExtra("arme",json.getString("arme"));
                             view.getContext().startActivity(intent);
 
 
@@ -101,5 +102,13 @@ public class login extends AppCompatActivity {
 
         // Add the request to the RequestQueue.
         queue.add(stringRequest);
+    };
+
+    public void goToRegisterPage(View view){
+
+        Log.e("DEVE0304", "Button clicked");
+
+        Intent intent = new Intent(view.getContext(), RegisterPage.class);
+        view.getContext().startActivity(intent);
     };
 }
