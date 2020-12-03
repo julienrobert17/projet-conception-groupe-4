@@ -24,14 +24,14 @@
     <ImageView
         android:id="@+id/imageView6"
         android:layout_width="879dp"
-        android:layout_height="564dp"
+        android:layout_height="700dp"
         android:layout_marginTop="100dp"
         android:layout_marginBottom="800dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/nav_host_fragment"
-        app:srcCompat="@drawable/_sxpngusn74zzg_j3hltcibwwjnplp1wddtvlbwhlnl1rclm0ltczrub3pvsrb_mcqjc5ndcfd1arkro_mfrz_wuq1pdcanvzls1" />
+        app:srcCompat="@drawable/_ded2a4a12194663" />
 
     <ImageView
         android:id="@+id/imageView"

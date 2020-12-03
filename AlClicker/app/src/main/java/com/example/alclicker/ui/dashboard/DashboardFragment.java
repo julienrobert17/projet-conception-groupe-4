@@ -54,7 +54,16 @@ public class DashboardFragment extends Fragment {
 
         MainActivity activity = (MainActivity) getActivity();
 
+
+
         score = activity.getScore();
+
+        SharedPreferences myPreferences= PreferenceManager.getDefaultSharedPreferences(this.getContext());
+        int ScoreLocal = myPreferences.getInt("storedNumber", -1);
+
+        if(ScoreLocal > score){
+            score = ScoreLocal;
+        }
 
         IdUser = activity.getIdUser();
 
@@ -81,6 +90,12 @@ public class DashboardFragment extends Fragment {
                 TextView scoreView = (TextView) getView().findViewById(R.id.scoreView);
 
                 scoreView.setText(String.valueOf(score));
+
+
+                SharedPreferences myPreferences = PreferenceManager.getDefaultSharedPreferences(getContext());
+                SharedPreferences.Editor editor = myPreferences.edit();
+                editor.putInt("storedNumber", score); // value to store
+                editor.apply();
 
             }
 
@@ -121,6 +136,8 @@ public class DashboardFragment extends Fragment {
 
     }
 
+
+
     @Override
     public void onStop() {
         super.onStop();
@@ -131,40 +148,43 @@ public class DashboardFragment extends Fragment {
         super.onPause();
         Log.e("DEVE0304", "MainActivity:onPause()");
     }
-    @Override
-    public void onDestroy() {
-        super.onDestroy();
-        Log.e("DEVE0304", "MainActivity:onDestroy()");
-    }
 
 
 
 
     public void saveData(){
-        TextView scoreView = (TextView) getView().findViewById(R.id.scoreView);
 
-        RequestQueue queue = Volley.newRequestQueue(this.getContext());
-        String url = "http://192.168.1.47/ProjetTransDev/vrai/projet-conception-groupe-4-main/api/UpdateScore.php?id_user=" + IdUser + "&score=" + scoreView.getText().toString();
+        try {
 
-        Log.e("url", url);
+            TextView scoreView = (TextView) getView().findViewById(R.id.scoreView);
 
-        // Request a string response from the provided URL.
-        StringRequest stringRequest = new StringRequest(Request.Method.GET, url,
-        new Response.Listener<String>() {
-            @Override
-            public void onResponse(String response) {
-                // Display the response string.
-                Log.e("ResponseLog", "Data has been saved");
-            }
+            RequestQueue queue = Volley.newRequestQueue(this.getContext());
+            String url = "http://192.168.1.47/ProjetTransDev/vrai/projet-conception-groupe-4-main/api/UpdateScore.php?id_user=" + IdUser + "&score=" + scoreView.getText().toString();
 
-        }, new Response.ErrorListener() {
-            @Override
-            public void onErrorResponse(VolleyError error) {
-                Log.e("ErrorResponseLog", String.valueOf(error));
-            }
-        });
+            //Log.e("url", url);
 
-        // Add the request to the RequestQueue.
-        queue.add(stringRequest);
+            // Request a string response from the provided URL.
+            StringRequest stringRequest = new StringRequest(Request.Method.GET, url,
+                    new Response.Listener<String>() {
+                        @Override
+                        public void onResponse(String response) {
+                            // Display the response string.
+                            Log.e("ResponseLog", "Data has been saved");
+                        }
+
+                    }, new Response.ErrorListener() {
+                @Override
+                public void onErrorResponse(VolleyError error) {
+                    Log.e("ErrorResponseLog", String.valueOf(error));
+                }
+            });
+
+            // Add the request to the RequestQueue.
+            queue.add(stringRequest);
+        }catch(Exception e){
+            Log.e("error saveDate", "not page");
+        }
+
+
     };
 }
