@@ -2,10 +2,15 @@ package com.example.alclicker.ui.dashboard;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.graphics.drawable.Drawable;
 import android.media.Image;
+import android.net.Uri;
 import android.os.Bundle;
 import android.os.SystemClock;
 import android.preference.PreferenceManager;
+import android.text.Layout;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -13,11 +18,14 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.core.widget.ImageViewCompat;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
@@ -29,9 +37,14 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
+import com.example.alclicker.IdImage;
 import com.example.alclicker.MainActivity;
 import com.example.alclicker.R;
 import com.example.alclicker.login;
+
+import org.json.JSONException;
+
+import java.io.File;
 
 
 public class DashboardFragment extends Fragment {
@@ -56,10 +69,12 @@ public class DashboardFragment extends Fragment {
 
 
 
+
         score = activity.getScore();
 
         SharedPreferences myPreferences= PreferenceManager.getDefaultSharedPreferences(this.getContext());
         int ScoreLocal = myPreferences.getInt("storedNumber", -1);
+
 
         if(ScoreLocal > score){
             score = ScoreLocal;
@@ -67,7 +82,40 @@ public class DashboardFragment extends Fragment {
 
         IdUser = activity.getIdUser();
 
-        arme = activity.getArme();
+
+        String ArmeLocal = myPreferences.getString("arme", "");
+        if(ArmeLocal != ""){
+            arme = ArmeLocal;
+        }else{
+            arme = activity.getArme();
+        }
+
+
+        ImageView armeView = (ImageView) view.findViewById(R.id.imageArme);
+
+
+        int IntIdArme = 0;
+
+        try {
+
+            IdImage idImage = new IdImage();
+
+            IntIdArme = idImage.getIdArme(arme);
+
+
+
+
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+
+        try {
+            armeView.setImageResource(IntIdArme);
+        } catch (Exception e){
+            armeView.setImageResource(R.drawable.poing);
+        }
+
+
 
 
         final TextView textView = view.findViewById(R.id.scoreView);
@@ -80,8 +128,8 @@ public class DashboardFragment extends Fragment {
             }
         });
 
-        ImageView button = (ImageView) view.findViewById(R.id.imageAlexis);
-        button.setOnClickListener(new View.OnClickListener() {
+        ImageView imageAlexis = (ImageView) view.findViewById(R.id.imageAlexis);
+        imageAlexis.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
@@ -90,7 +138,6 @@ public class DashboardFragment extends Fragment {
                 TextView scoreView = (TextView) getView().findViewById(R.id.scoreView);
 
                 scoreView.setText(String.valueOf(score));
-
 
                 SharedPreferences myPreferences = PreferenceManager.getDefaultSharedPreferences(getContext());
                 SharedPreferences.Editor editor = myPreferences.edit();

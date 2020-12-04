@@ -7,6 +7,7 @@ import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
 import com.example.alclicker.MainActivity;
+import com.example.alclicker.R;
 
 public class DashboardViewModel extends ViewModel {
 
