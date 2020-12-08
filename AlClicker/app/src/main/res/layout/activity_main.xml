@@ -19,7 +19,9 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:menu="@menu/bottom_nav_menu" />
+        app:menu="@menu/bottom_nav_menu">
+
+    </com.google.android.material.bottomnavigation.BottomNavigationView>
 
     <ImageView
         android:id="@+id/imageView6"
@@ -35,34 +37,42 @@
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="405dp"
-        android:layout_height="446dp"
-        android:layout_marginTop="330dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="370dp"
+        android:layout_marginRight="370dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/kisspng_black_barbed_wire_white_pattern_barbwire_png_transparent_images_5a89bf2a483109_4065113915189"
-        tools:layout_editor_absoluteX="-40dp"
-        tools:ignore="MissingConstraints" />
+        app:srcCompat="@drawable/kisspng_black_barbed_wire_white_pattern_barbwire_png_transparent_images_vert_5a89bf2a483109_4065113915189" />
 
     <ImageView
-        android:id="@+id/imageView5"
-        android:layout_width="432dp"
-        android:layout_height="485dp"
-        android:layout_marginTop="100dp"
-        app:layout_constraintBottom_toTopOf="@+id/nav_host_fragment"
+        android:id="@+id/imageView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="370dp"
+        android:layout_marginLeft="370dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/kisspng_black_barbed_wire_white_pattern_barbwire_png_transparent_images_5a89bf2a483109_4065113915189"
-        tools:layout_editor_absoluteX="-40dp"
-        tools:ignore="MissingConstraints" />
+        app:srcCompat="@drawable/kisspng_black_barbed_wire_white_pattern_barbwire_png_transparent_images_vert_5a89bf2a483109_4065113915189" />
 
     <TextView
         android:id="@+id/textView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="1250dp"
-        android:text="1000 pts"
+        android:layout_width="80dp"
+        android:layout_height="41dp"
+        android:layout_marginBottom="1280dp"
+        android:fontFamily="sans-serif-light"
+        android:text="$ 1000 $"
+        android:textAllCaps="true"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="#FFEB3B"
+        android:textSize="18sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/nav_host_fragment"
-        tools:layout_editor_absoluteX="152dp"
         tools:ignore="MissingConstraints" />
 
     <fragment
@@ -70,6 +80,7 @@
         android:name="androidx.navigation.fragment.NavHostFragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_marginLeft="16dp"
         android:rotationX="2"
         app:defaultNavHost="true"
         app:layout_constraintBottom_toTopOf="@id/nav_view"
