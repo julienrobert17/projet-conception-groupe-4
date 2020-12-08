@@ -6,16 +6,23 @@
     android:layout_height="match_parent">
 
     <ImageView
-        android:id="@+id/imageView5"
-        android:layout_width="405dp"
-        android:layout_height="737dp"
-        android:src="@drawable/_ded2a4a12194663"
-        app:layout_constraintStart_toStartOf="parent" />
+        android:id="@+id/imageView6"
+        android:layout_width="1097dp"
+        android:layout_height="842dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginBottom="00dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nav_host_fragment"
+        app:srcCompat="@drawable/_ded2a4a12194663" />
 
     <LinearLayout
+        android:id="@+id/linearLayout2"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        app:layout_constraintTop_toTopOf="parent">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -52,7 +59,7 @@
                 android:layout_gravity="center"
                 android:onClick="goToRegisterPage"
                 android:text="Pas de compte ? Cliquez ici"
-                android:textColor="#EA2C2C"
+                android:textColor="#DA2C2C"
                 android:textSize="18sp"
                 android:textStyle="bold" />
 

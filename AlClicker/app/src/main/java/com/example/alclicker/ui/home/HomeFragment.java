@@ -70,6 +70,11 @@ public class HomeFragment extends Fragment {
 
 
         ImageView imageCasserole = (ImageView) root.findViewById(R.id.Casserole);
+
+        if(ScoreLocal < 7500){
+            imageCasserole.setImageAlpha(90);
+        }
+
         imageCasserole.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -83,6 +88,11 @@ public class HomeFragment extends Fragment {
         });
 
         ImageView imageChipolata = (ImageView) root.findViewById(R.id.Chipolata);
+
+        if(ScoreLocal < 500){
+            imageChipolata.setImageAlpha(90);
+        }
+
         imageChipolata.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -95,6 +105,11 @@ public class HomeFragment extends Fragment {
         });
 
         ImageView imageTong = (ImageView) root.findViewById(R.id.Tong);
+
+        if(ScoreLocal < 5000){
+            imageTong.setImageAlpha(90);
+        }
+
         imageTong.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -111,6 +126,11 @@ public class HomeFragment extends Fragment {
 
 
         ImageView imageAltere = (ImageView) root.findViewById(R.id.Altere);
+
+        if(ScoreLocal < 25000){
+            imageAltere.setImageAlpha(90);
+        }
+
         imageAltere.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -123,6 +143,11 @@ public class HomeFragment extends Fragment {
         });
 
         ImageView imageBoxe = (ImageView) root.findViewById(R.id.Boxe);
+
+        if(ScoreLocal < 15000){
+            imageBoxe.setImageAlpha(90);
+        }
+
         imageBoxe.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

@@ -104,6 +104,8 @@ public class DashboardFragment extends Fragment {
 
             Log.e("idarmeLog", arme);
 
+            Log.e("IdPoing", String.valueOf(R.id.Poing));
+
 
         } catch (JSONException e) {
             e.printStackTrace();

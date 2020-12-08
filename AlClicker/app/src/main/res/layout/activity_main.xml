@@ -5,7 +5,7 @@
     android:id="@+id/container"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingTop="?attr/actionBarSize"
+    android:paddingTop="0dp"
     android:visibility="visible"
     tools:visibility="visible">
 
@@ -25,8 +25,8 @@
 
     <ImageView
         android:id="@+id/imageView6"
-        android:layout_width="879dp"
-        android:layout_height="700dp"
+        android:layout_width="1097dp"
+        android:layout_height="842dp"
         android:layout_marginTop="100dp"
         android:layout_marginBottom="800dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -57,24 +57,6 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/kisspng_black_barbed_wire_white_pattern_barbwire_png_transparent_images_vert_5a89bf2a483109_4065113915189" />
 
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="80dp"
-        android:layout_height="41dp"
-        android:layout_marginBottom="1280dp"
-        android:fontFamily="sans-serif-light"
-        android:text="$ 1000 $"
-        android:textAllCaps="true"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-        android:textColor="#FFEB3B"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/nav_host_fragment"
-        tools:ignore="MissingConstraints" />
-
     <fragment
         android:id="@+id/nav_host_fragment"
         android:name="androidx.navigation.fragment.NavHostFragment"
@@ -82,7 +64,7 @@
         android:layout_height="match_parent"
         android:layout_marginLeft="16dp"
         android:rotationX="2"
-        app:defaultNavHost="true"
+        app:defaultNavHost="false"
         app:layout_constraintBottom_toTopOf="@id/nav_view"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintLeft_toLeftOf="parent"

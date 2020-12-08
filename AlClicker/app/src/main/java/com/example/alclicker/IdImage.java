@@ -12,14 +12,14 @@ public class IdImage {
     JSONObject IdImage = new JSONObject();
 
 
-    JSONObject jObject  = new JSONObject("    {\"poing\":2131165345, \"club_de_golf\":2131165293, \"casserole\":2131165290,\"chipolata\":2131165291, \"claquette\":2131165292, \"cuillere_en_bois\":2131165294, \"gants_de_boxe\":2131165301, \"haltere\":2131165302, \"marteau_de_thor\":2131165313, \"penetrator\":2131165343, \"pied_de_biche\":2131165344, \"tapette_a_mouche\":2131165347, \"tazer\":2131165348}\n"); // json
+    JSONObject jObject  = new JSONObject("    {\"poing\":2131230731, \"club_de_golf\":2131165293, \"casserole\":2131165290,\"chipolata\":2131165291, \"claquette\":2131165292, \"cuillere_en_bois\":2131165294, \"gants_de_boxe\":2131165301, \"haltere\":2131165302, \"marteau_de_thor\":2131165313, \"penetrator\":2131165343, \"pied_de_biche\":2131165344, \"tapette_a_mouche\":2131165347, \"tazer\":2131165348}\n"); // json
 
-    JSONObject jDegatObjectDico  = new JSONObject("{ \"poingATC\": 1 , \"club_de_golfATC\":4,\"casseroleATC\": 3 , \"chipolataATC\": 2,\"claquetteATC\":2,\"cuillere_en_boisATC\":3,\"gants_de_boxeATC\":5,\"haltereATC\":7,\"marteau_de_thorATC\":9,\"penetratorATC\":15,\"pied_de_bicheATC\":8,\"tapette_a_moucheATC\":2,\"tazerATC\":5}"); // json
+    JSONObject jDegatObjectDico  = new JSONObject("{ \"poingATC\": 1 , \"club_de_golfATC\":4,\"casseroleATC\": 3 , \"chipolataATC\": 2,\"claquetteATC\":3,\"cuillere_en_boisATC\":3,\"gants_de_boxeATC\":5,\"haltereATC\":7,\"marteau_de_thorATC\":9,\"penetratorATC\":15,\"pied_de_bicheATC\":8,\"tapette_a_moucheATC\":2,\"tazerATC\":5}"); // json
 
 
-    JSONObject jDegatObjectTab  = new JSONObject("{ \"1\": 1 , \"2\":4, \"3\": 3 , \"4\": 2, \"5\":2, \"6\":3, \"7\":5, \"8\":7, \"9\":9, \"10\":15, \"11\":8, \"12\":2, \"13\":5}"); // json
+    JSONObject jDegatObjectTab  = new JSONObject("{ \"1\": 1 , \"2\":4, \"3\": 3 , \"4\": 2, \"5\":3, \"6\":3, \"7\":5, \"8\":7, \"9\":9, \"10\":15, \"11\":8, \"12\":2, \"13\":5}"); // json
 
-    JSONObject jIdObjectTab  = new JSONObject("{ \"1\": 2131165345 , \"2\":2131165345, \"3\": 2131165290 , \"4\": 2131165291, \"5\":2131165292, \"6\":2131165294, \"7\":2131165301, \"8\":2131165302, \"9\":2131165313, \"10\":2131165343, \"11\":2131165344, \"12\":2131165347, \"13\":2131165348}"); // json
+    JSONObject jIdObjectTab  = new JSONObject("{ \"1\": 2131230731 , \"2\":2131165345, \"3\": 2131165290 , \"4\": 2131165291, \"5\":2131165292, \"6\":2131165294, \"7\":2131165301, \"8\":2131165302, \"9\":2131165313, \"10\":2131165343, \"11\":2131165344, \"12\":2131165347, \"13\":2131165348}"); // json
 
 
 

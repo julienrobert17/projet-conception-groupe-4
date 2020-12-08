@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">AlClicker</string>
-    <string name="title_home">Home</string>
-    <string name="title_dashboard">Dashboard</string>
-    <string name="title_notifications">Notifications</string>
+    <string name="title_home">Magasin</string>
+    <string name="title_dashboard">Alexis</string>
+    <string name="title_notifications">Classement</string>
 </resources>

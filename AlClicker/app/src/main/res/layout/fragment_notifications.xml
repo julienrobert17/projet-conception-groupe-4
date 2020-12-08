@@ -7,68 +7,41 @@
     android:layout_height="match_parent"
     tools:context=".ui.notifications.NotificationsFragment">
 
-    <ImageView
-        android:id="@+id/imageView3"
-        android:layout_width="405dp"
-        android:layout_height="737dp"
-        android:src="@drawable/_ded2a4a12194663"
-        app:layout_constraintStart_toStartOf="parent" />
 
     <ImageView
         android:id="@+id/imageView7"
-        android:layout_width="326dp"
-        android:layout_height="279dp"
+        android:layout_width="1218dp"
+        android:layout_height="263dp"
         android:src="@drawable/kisspng_black_barbed_wire_white_pattern_barbwire_png_transparent_images_5a89bf2a483109_4065113915189"
         android:visibility="visible"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/imageView9"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteY="46dp"
         tools:visibility="visible" />
 
     <ImageView
         android:id="@+id/imageView10"
-        android:layout_width="326dp"
-        android:layout_height="279dp"
+        android:layout_width="404dp"
+        android:layout_height="391dp"
         android:layout_marginTop="115dp"
         android:src="@drawable/kisspng_black_barbed_wire_white_pattern_barbwire_png_transparent_images_5a89bf2a483109_4065113915189"
         android:visibility="visible"
         app:layout_constraintTop_toBottomOf="@+id/imageView7"
-        tools:layout_editor_absoluteX="39dp"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="3dp"
         tools:visibility="visible" />
-
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="287dp"
-        android:layout_height="596dp"
-        android:layout_marginEnd="265dp"
-        android:layout_marginRight="265dp"
-        android:src="@drawable/kisspng_black_barbed_wire_white_pattern_barbwire_png_transparent_images_vert_5a89bf2a483109_4065113915189"
-        app:layout_constraintEnd_toEndOf="@+id/imageView3"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="73dp" />
-
-    <ImageView
-        android:id="@+id/imageView4"
-        android:layout_width="287dp"
-        android:layout_height="596dp"
-        android:layout_marginStart="265dp"
-        android:layout_marginLeft="265dp"
-        android:src="@drawable/kisspng_black_barbed_wire_white_pattern_barbwire_png_transparent_images_vert_5a89bf2a483109_4065113915189"
-        app:layout_constraintEnd_toEndOf="@+id/imageView3"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="73dp" />
 
     <ImageView
         android:id="@+id/imageView9"
         android:layout_width="419dp"
         android:layout_height="87dp"
-        android:layout_marginTop="75dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:src="@drawable/coupes"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/imageView3" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <LinearLayout
         android:id="@+id/linearLayout"
@@ -80,13 +53,13 @@
         android:paddingTop="100dp"
         android:paddingRight="60dp"
         tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="-16dp"
-        tools:layout_editor_absoluteY="0dp">
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="-42dp">
 
         <TableLayout
             android:id="@+id/classement"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="422dp"
             android:orientation="vertical"
             android:stretchColumns="0,1,2">
 
