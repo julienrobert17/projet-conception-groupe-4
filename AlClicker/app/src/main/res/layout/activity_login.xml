@@ -5,6 +5,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="405dp"
+        android:layout_height="737dp"
+        android:src="@drawable/_ded2a4a12194663"
+        app:layout_constraintStart_toStartOf="parent" />
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -24,7 +31,8 @@
                 android:ems="10"
                 android:importantForAutofill="no"
                 android:inputType="textPersonName"
-                android:text="daniellazer" />
+                android:text="daniellazer"
+                android:textColor="#FFFFFF" />
 
             <EditText
                 android:id="@+id/textMdpInput"
@@ -34,7 +42,8 @@
                 android:ems="10"
                 android:importantForAutofill="no"
                 android:inputType="textPassword"
-                android:text="mdp" />
+                android:text="mdp"
+                android:textColor="#FFFFFF" />
 
             <TextView
                 android:id="@+id/noAccount"
@@ -43,8 +52,9 @@
                 android:layout_gravity="center"
                 android:onClick="goToRegisterPage"
                 android:text="Pas de compte ? Cliquez ici"
-                android:textColor="#2C49EA"
-                android:textSize="18sp" />
+                android:textColor="#EA2C2C"
+                android:textSize="18sp"
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/errorText"
@@ -63,7 +73,7 @@
                 android:layout_gravity="center"
                 android:onClick="runLoginRequest"
                 android:text="CONNECTER"
-                app:backgroundTint="#DD1D1D" />
+                app:backgroundTint="#DD1D43" />
 
         </LinearLayout>
     </LinearLayout>
