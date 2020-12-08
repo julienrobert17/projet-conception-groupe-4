@@ -98,16 +98,35 @@ public class DashboardFragment extends Fragment {
 
         try {
 
-            IdImage idImage = new IdImage();
+            IdImage infoImage = new IdImage();
 
-            IntIdArme = idImage.getIdArme(arme);
+            IntIdArme = infoImage.getIdArme(arme);
 
-
+            Log.e("idarmeLog", arme);
 
 
         } catch (JSONException e) {
             e.printStackTrace();
         }
+
+        Log.e("idarmeLog", String.valueOf(IntIdArme));
+
+
+        int IntDegatArme = 0;
+        try {
+
+            IdImage infoImage = new IdImage();
+
+            IntDegatArme = infoImage.getIdArmeTab(1);
+
+            Log.e("DegatArmeTab", String.valueOf(IntDegatArme));
+
+
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+
+        Log.e("idarmeLog", String.valueOf(IntDegatArme));
 
         try {
             armeView.setImageResource(IntIdArme);
@@ -133,7 +152,21 @@ public class DashboardFragment extends Fragment {
             @Override
             public void onClick(View view) {
 
-                score +=1;
+                IdImage infoImage = null;
+                try {
+                    infoImage = new IdImage();
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+                int IntDegatArme = 0;
+
+                try {
+                    IntDegatArme = infoImage.getDegatArmeDico(arme + "ATC");
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+
+                score += (1 * IntDegatArme);
 
                 TextView scoreView = (TextView) getView().findViewById(R.id.scoreView);
 

@@ -58,14 +58,14 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="A" />
+                    android:text="Julien" />
 
                 <TextView
                     android:id="@+id/score1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="9999" />
+                    android:text="104768" />
             </TableRow>
 
             <TableRow
@@ -86,14 +86,14 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="A" />
+                    android:text="Hugo" />
 
                 <TextView
                     android:id="@+id/score2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="9999" />
+                    android:text="97467" />
             </TableRow>
 
             <TableRow
@@ -114,14 +114,14 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="A" />
+                    android:text="Daniel" />
 
                 <TextView
                     android:id="@+id/score3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="9999" />
+                    android:text="92876" />
             </TableRow>
 
             <TableRow
@@ -142,14 +142,14 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="A" />
+                    android:text="Alexis" />
 
                 <TextView
                     android:id="@+id/score4"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="9999" />
+                    android:text="87567" />
             </TableRow>
 
             <TableRow
@@ -170,14 +170,14 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="A" />
+                    android:text="Maitre W" />
 
                 <TextView
                     android:id="@+id/scroe5"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="9999" />
+                    android:text="73987" />
             </TableRow>
 
             <TableRow
@@ -198,14 +198,14 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="A" />
+                    android:text="Alexandre" />
 
                 <TextView
                     android:id="@+id/score6"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="9999" />
+                    android:text="65234" />
             </TableRow>
 
             <TableRow
@@ -226,14 +226,14 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="A" />
+                    android:text="Marine" />
 
                 <TextView
                     android:id="@+id/score7"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="9999" />
+                    android:text="54167" />
             </TableRow>
 
             <TableRow
@@ -254,14 +254,14 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="A" />
+                    android:text="Thomas" />
 
                 <TextView
                     android:id="@+id/score8"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="9999" />
+                    android:text="32943" />
             </TableRow>
 
             <TableRow
@@ -282,14 +282,14 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="A" />
+                    android:text="Fabrice" />
 
                 <TextView
                     android:id="@+id/score9"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="9999" />
+                    android:text="15089" />
             </TableRow>
 
             <TableRow
@@ -310,14 +310,14 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="A" />
+                    android:text="Baptiste" />
 
                 <TextView
                     android:id="@+id/score10"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="9999" />
+                    android:text="666" />
             </TableRow>
         </TableLayout>
 

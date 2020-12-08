@@ -19,27 +19,149 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+
+
     <ImageView
         android:id="@+id/Casserole"
-        android:transitionName="chipolata"
         android:layout_width="128dp"
         android:layout_height="123dp"
-        android:layout_marginStart="51dp"
-        android:layout_marginLeft="51dp"
-        android:layout_marginTop="70dp"
+        android:layout_marginStart="220dp"
+        android:layout_marginLeft="220dp"
+        android:layout_marginTop="232dp"
         android:src="@drawable/casserole"
+        android:transitionName="chipolata"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/Chipolata"
         android:layout_width="131dp"
         android:layout_height="125dp"
-        android:layout_marginStart="42dp"
-        android:layout_marginLeft="42dp"
-        android:layout_marginTop="68dp"
+        android:layout_marginStart="220dp"
+        android:layout_marginLeft="220dp"
+        android:layout_marginTop="52dp"
         android:src="@drawable/chipolata"
-        app:layout_constraintStart_toEndOf="@+id/Casserole"
-        app:layout_constraintTop_toTopOf="parent"/>
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/Tong"
+        android:layout_width="128dp"
+        android:layout_height="122dp"
+        android:layout_marginStart="54dp"
+        android:layout_marginLeft="54dp"
+        android:layout_marginTop="56dp"
+        android:src="@drawable/claquette"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Poing"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/Poing"
+        android:layout_width="137dp"
+        android:layout_height="126dp"
+        android:layout_marginStart="54dp"
+        android:layout_marginLeft="54dp"
+        android:layout_marginTop="52dp"
+        android:src="@drawable/poing"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/Boxe"
+        android:layout_width="154dp"
+        android:layout_height="163dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="32dp"
+        android:src="@drawable/gants_de_boxe"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_home"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/Altere"
+        android:layout_width="145dp"
+        android:layout_height="154dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginLeft="1dp"
+        android:layout_marginTop="18dp"
+        android:src="@drawable/haltere"
+        app:layout_constraintStart_toEndOf="@+id/Boxe"
+        app:layout_constraintTop_toBottomOf="@+id/text_home"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="76dp"
+        android:layout_marginLeft="76dp"
+        android:layout_marginTop="3dp"
+        android:text="poing : gratuit"
+        android:textColor="#FFFFFF"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Poing" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="61dp"
+        android:layout_marginLeft="61dp"
+        android:layout_marginTop="4dp"
+        android:text="Chipolata : 500 pts"
+        android:textColor="#FFFFFF"
+        app:layout_constraintStart_toEndOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/Chipolata" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="56dp"
+        android:layout_marginLeft="56dp"
+        android:layout_marginTop="8dp"
+        android:text="Claquette : 5 000 pts"
+        android:textColor="#FFFFFF"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Tong" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
+        android:text="Casserole : 7 500 pts"
+        android:textColor="#FFFFFF"
+        app:layout_constraintStart_toEndOf="@+id/Boxe"
+        app:layout_constraintTop_toBottomOf="@+id/Casserole" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:layout_marginLeft="36dp"
+        android:text="Gant de boxe : 15 000 pts"
+        android:textColor="#FFFFFF"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Boxe" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="13dp"
+        android:text="Altere : 25 000 pts"
+        android:textColor="#FFFFFF"
+        app:layout_constraintStart_toEndOf="@+id/Boxe"
+        app:layout_constraintTop_toBottomOf="@+id/Altere" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
